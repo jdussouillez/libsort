@@ -5,6 +5,8 @@
 extern "C" {
 #endif
 
+int newgap(int gap);
+
 void combsort(void* base, size_t nmemb, size_t size, int(*compare)(const void*, const void*));
 
 #ifdef __cplusplus

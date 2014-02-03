@@ -7,7 +7,7 @@ BINDIR = bin
 TESTDIR = tests
 INCLUDES = -I$(INCDIR)
 LIBFLAGS = -cruvs
-OBJ = $(OBJDIR)/sort.o $(OBJDIR)/bubblesort.o $(OBJDIR)/bucketsort.o $(OBJDIR)/combsort.o $(OBJDIR)/countingsort.o $(OBJDIR)/heapsort.o $(OBJDIR)/insertionsort.o $(OBJDIR)/mergesort.o $(OBJDIR)/quicksort.o $(OBJDIR)/radixsort.o $(OBJDIR)/selectionsort.o $(OBJDIR)/shellsort.o
+OBJ = $(OBJDIR)/sort.o $(OBJDIR)/bubblesort.o $(OBJDIR)/combsort.o $(OBJDIR)/heapsort.o $(OBJDIR)/insertionsort.o $(OBJDIR)/mergesort.o $(OBJDIR)/quicksort.o $(OBJDIR)/radixsort.o $(OBJDIR)/selectionsort.o $(OBJDIR)/shellsort.o
 TESTFILE=$(TESTDIR)/sort_test
 TARGETS = lib test
 

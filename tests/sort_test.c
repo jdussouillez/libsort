@@ -5,9 +5,7 @@
 
 #include "sort.h"
 #include "bubblesort.h"
-#include "bucketsort.h"
 #include "combsort.h"
-#include "countingsort.h"
 #include "heapsort.h"
 #include "insertionsort.h"
 #include "mergesort.h"
@@ -152,38 +150,6 @@ void bubblesort_nullfct_TTF() {
   TEST_NULL_CMPFCT(bubblesort);
 }
 
-
-/*
- ************************************************
- *************** Bucket sort suite **************
- ************************************************
- */
-/*
- * Test-to-pass
- */
-void bucketsort_int_TTP() {
-  CPY_SORT_CHECK(intarray, int, bucketsort, compare_int);
-}
-
-void bucketsort_float_TTP() {
-  CPY_SORT_CHECK(floatarray, float, bucketsort, compare_float);
-}
-
-void bucketsort_struct_TTP() {
-  CPY_SORT_CHECK(dim2array, dim2_t, bucketsort, compare_dim2);
-}
-
-/*
- * Test-to-fail
- */
-void bucketsort_nullarray_TTF() {
-  TEST_NULL_ARRAY(bucketsort);
-}
-
-void bucketsort_nullfct_TTF() {
-  TEST_NULL_CMPFCT(bucketsort);
-}
-
 /*
  ********************************************
  ************** Comb sort suite *************
@@ -213,37 +179,6 @@ void combsort_nullarray_TTF() {
 
 void combsort_nullfct_TTF() {
   TEST_NULL_CMPFCT(combsort);
-}
-
-/*
- *************************************************
- *************** Counting sort suite *************
- *************************************************
- */
-/*
- * Test-to-pass
- */
-void countingsort_int_TTP() {
-  CPY_SORT_CHECK(intarray, int, countingsort, compare_int);
-}
-
-void countingsort_float_TTP() {
-  CPY_SORT_CHECK(floatarray, float, countingsort, compare_float);
-}
-
-void countingsort_struct_TTP() {
-  CPY_SORT_CHECK(dim2array, dim2_t, countingsort, compare_dim2);
-}
-
-/*
- * Test-to-fail
- */
-void countingsort_nullarray_TTF() {
-  TEST_NULL_ARRAY(countingsort);
-}
-
-void countingsort_nullfct_TTF() {
-  TEST_NULL_CMPFCT(countingsort);
 }
 
 /*
@@ -510,28 +445,8 @@ int main(void) {
   }
 
   /*
-   * Bucket sort suite
-   */
-  /*
-  pSuite = CU_add_suite("Bucket sort", init_suite, clean_suite);
-  if (pSuite == NULL) {
-    CU_cleanup_registry();
-    return CU_get_error();
-  }
-  if (CU_add_test(pSuite, "bucketsort_int_TTP", bucketsort_int_TTP) == NULL ||
-      CU_add_test(pSuite, "bucketsort_float_TTP", bucketsort_float_TTP) == NULL ||
-      CU_add_test(pSuite, "bucketsort_struct_TTP", bucketsort_struct_TTP) == NULL ||
-      CU_add_test(pSuite, "bucketsort_nullarray_TTF", bucketsort_nullarray_TTF) == NULL ||
-      CU_add_test(pSuite, "bucketsort_nullfct_TTF", bucketsort_nullfct_TTF) == NULL) {
-    CU_cleanup_registry();
-    return CU_get_error();
-  }
-  */
-
-  /*
    * Comp sort suite
    */
-  /*
   pSuite = CU_add_suite("Comb sort", init_suite, clean_suite);
   if (pSuite == NULL) {
     CU_cleanup_registry();
@@ -545,26 +460,6 @@ int main(void) {
     CU_cleanup_registry();
     return CU_get_error();
   }
-  */
-
-  /*
-   * Counting sort suite
-   */
-  /*
-  pSuite = CU_add_suite("Counting sort", init_suite, clean_suite);
-  if (pSuite == NULL) {
-    CU_cleanup_registry();
-    return CU_get_error();
-  }
-  if (CU_add_test(pSuite, "countingsort_int_TTP", countingsort_int_TTP) == NULL ||
-      CU_add_test(pSuite, "countingsort_float_TTP", countingsort_float_TTP) == NULL ||
-      CU_add_test(pSuite, "countingsort_struct_TTP", countingsort_struct_TTP) == NULL ||
-      CU_add_test(pSuite, "countingsort_nullarray_TTF", countingsort_nullarray_TTF) == NULL ||
-      CU_add_test(pSuite, "countingsort_nullfct_TTF", countingsort_nullfct_TTF) == NULL) {
-    CU_cleanup_registry();
-    return CU_get_error();
-  }
-  */
 
   /*
    * Heapsort suite
