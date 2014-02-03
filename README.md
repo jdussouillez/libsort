@@ -22,23 +22,24 @@ How to use
 ----------
 
 // TODO
+// ref qsort, functions prototypes
 
 Sorting algorithms
 ------------------
 
 The sorting algorithms implemented are : 
 
-Bubble sort
-Bucket sort
-Comb sort
-Counting sort
-Heapsort
-Insertion sort
-Merge sort
-Quicksort
-Radix sort
-Selection sort
-Shell sort
+- Bubble sort
+- Bucket sort
+- Comb sort
+- Counting sort
+- Heapsort
+- Insertion sort
+- Merge sort
+- Quicksort
+- Radix sort
+- Selection sort
+- Shell sort
 
 See the [Wikipedia article about sorting algorithms](http://en.wikipedia.org/wiki/Sorting_algorithm#Popular_sorting_algorithms) for more informations.
 
