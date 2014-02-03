@@ -30,9 +30,7 @@ Sorting algorithms
 The sorting algorithms implemented are : 
 
 - Bubble sort
-- Bucket sort
 - Comb sort
-- Counting sort
 - Heapsort
 - Insertion sort
 - Merge sort
@@ -41,6 +39,7 @@ The sorting algorithms implemented are :
 - Selection sort
 - Shell sort
 
+The bucket and counting sorts are not implemented because they can only be used on arrays of integer.
 See the [Wikipedia article about sorting algorithms](http://en.wikipedia.org/wiki/Sorting_algorithm#Popular_sorting_algorithms) for more informations.
 
 
