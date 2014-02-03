@@ -21,7 +21,7 @@ make distclean
 How to use
 ----------
 
-// TODO:
+// TODO
 
 Sorting algorithms
 ------------------
@@ -49,6 +49,3 @@ Tools
 - Written with Emacs 24
 - Built with gcc 4.8
 - The testing program uses CUnit 2.1 (basic interface)
-
-
-
