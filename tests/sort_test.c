@@ -464,7 +464,6 @@ int main(void) {
   /*
    * Heapsort suite
    */
-  /*
   pSuite = CU_add_suite("Heapsort", init_suite, clean_suite);
   if (pSuite == NULL) {
     CU_cleanup_registry();
@@ -478,7 +477,6 @@ int main(void) {
     CU_cleanup_registry();
     return CU_get_error();
   }
-  */
 
   /*
    * Insertion sort suite
