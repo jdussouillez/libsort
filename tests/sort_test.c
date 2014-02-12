@@ -10,7 +10,6 @@
 #include "insertionsort.h"
 #include "mergesort.h"
 #include "quicksort.h"
-#include "radixsort.h"
 #include "selectionsort.h"
 #include "shellsort.h"
 
@@ -306,37 +305,6 @@ void quicksort_nullfct_TTF() {
 }
 
 /*
- ********************************************
- ************* Radix sort suite *************
- ********************************************
- */
-/*
- * Test-to-pass
- */
-void radixsort_int_TTP() {
-  CPY_SORT_CHECK(intarray, int, radixsort, compare_int);
-}
-
-void radixsort_float_TTP() {
-  CPY_SORT_CHECK(floatarray, float, radixsort, compare_float);
-}
-
-void radixsort_struct_TTP() {
-  CPY_SORT_CHECK(dim2array, dim2_t, radixsort, compare_dim2);
-}
-
-/*
- * Test-to-fail
- */
-void radixsort_nullarray_TTF() {
-  TEST_NULL_ARRAY(radixsort);
-}
-
-void radixsort_nullfct_TTF() {
-  TEST_NULL_CMPFCT(radixsort);
-}
-
-/*
  ************************************************
  ************* Selection sort suite *************
  ************************************************
@@ -498,7 +466,6 @@ int main(void) {
   /*
    * Merge sort suite
    */
-  /*
   pSuite = CU_add_suite("Merge sort", init_suite, clean_suite);
   if (pSuite == NULL) {
     CU_cleanup_registry();
@@ -512,7 +479,6 @@ int main(void) {
     CU_cleanup_registry();
     return CU_get_error();
   }
-  */
 
   /*
    * Quicksort suite
@@ -528,25 +494,6 @@ int main(void) {
       CU_add_test(pSuite, "quicksort_struct_TTP", quicksort_struct_TTP) == NULL ||
       CU_add_test(pSuite, "quicksort_nullarray_TTF", quicksort_nullarray_TTF) == NULL ||
       CU_add_test(pSuite, "quicksort_nullfct_TTF", quicksort_nullfct_TTF) == NULL) {
-    CU_cleanup_registry();
-    return CU_get_error();
-  }
-  */
-
-  /*
-   * Radix sort suite
-   */
-  /*
-  pSuite = CU_add_suite("Radix sort", init_suite, clean_suite);
-  if (pSuite == NULL) {
-    CU_cleanup_registry();
-    return CU_get_error();
-  }
-  if (CU_add_test(pSuite, "radixsort_int_TTP", radixsort_int_TTP) == NULL ||
-      CU_add_test(pSuite, "radixsort_float_TTP", radixsort_float_TTP) == NULL ||
-      CU_add_test(pSuite, "radixsort_struct_TTP", radixsort_struct_TTP) == NULL ||
-      CU_add_test(pSuite, "radixsort_nullarray_TTF", radixsort_nullarray_TTF) == NULL ||
-      CU_add_test(pSuite, "radixsort_nullfct_TTF", radixsort_nullfct_TTF) == NULL) {
     CU_cleanup_registry();
     return CU_get_error();
   }
