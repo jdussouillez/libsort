@@ -517,7 +517,6 @@ int main(void) {
   /*
    * Shell sort suite
    */
-  /*
   pSuite = CU_add_suite("Shell sort", init_suite, clean_suite);
   if (pSuite == NULL) {
     CU_cleanup_registry();
@@ -531,7 +530,6 @@ int main(void) {
     CU_cleanup_registry();
     return CU_get_error();
   }
-  */
 
   // Run all tests using the CUnit Basic interface
   CU_basic_set_mode(CU_BRM_VERBOSE);
