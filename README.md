@@ -10,7 +10,7 @@ How to build
 Use the makefile to build the lib (bin/libsort.a):
 ``` bash
 make # Build the lib and run the unit tests program.
-make clean # Clean the temporary and objets file.
+make clean # Clean the temporary and objects file.
 ```
 
 If you want to remove the lib and all the temporary files:
@@ -35,7 +35,6 @@ The sorting algorithms implemented are :
 - Insertion sort
 - Merge sort
 - Quicksort
-- Radix sort
 - Selection sort
 - Shell sort
 
