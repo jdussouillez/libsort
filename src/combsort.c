@@ -3,7 +3,10 @@
 #include "../include/sort.h"
 #include "../include/combsort.h"
 
-int newgap(int gap) {
+/*
+ * Calculates and returns the new gap using the old one.
+ */
+static int newgap(int gap) {
   gap = (gap * 10) / 13; // gap shrink factor = 1.3
   if (gap < 1)
     return 1;

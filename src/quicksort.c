@@ -3,7 +3,10 @@
 #include "../include/sort.h"
 #include "../include/quicksort.h"
 
-int partition(void* base, int begin, int end, size_t size, int pivot, int(*compare)(const void*, const void*)) {
+/*
+ * Partition the portion of the array between indexes "begin" and "end".
+ */
+static int partition(void* base, int begin, int end, size_t size, int pivot, int(*compare)(const void*, const void*)) {
   int i, j;
   swap(base + (pivot * size), base + (end * size), size);
   j = begin;
@@ -17,7 +20,10 @@ int partition(void* base, int begin, int end, size_t size, int pivot, int(*compa
   return j;
 }
 
-void quicksort_rec(void* base, int begin, int end, size_t size, int(*compare)(const void*, const void*)) {
+/*
+ * Sort the array between indexes "begin" and "end" (recursive).
+ */
+static void quicksort_rec(void* base, int begin, int end, size_t size, int(*compare)(const void*, const void*)) {
   int pivot;
   if (begin < end) {
     pivot = partition(base, begin, end, size, begin, compare); // begin as pivot

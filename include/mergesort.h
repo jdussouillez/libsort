@@ -6,16 +6,6 @@ extern "C" {
 #endif
 
 /*
- * Sort a part of the array
- */
-void merge(void* base, void* helper, int left, int mid, int right, size_t size, int(*compare)(const void*, const void*));
-
-/*
- * Sort the left and right side of the array, then combine them both (recursive)
- */
-void mergesort_rec(void* base, void* helper, int left, int right, size_t size, int(*compare)(const void*, const void*));
-
-/*
  * Sorts an array with "nmemb" elements of size "size" using the merge bubble sort algorithm.
  * The "base" argument points to the start of the array.
  * The contents of the array are sorted in ascending order according to a comparison function pointed to

@@ -4,10 +4,6 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-/*
- * Calculates and returns the new gap using the old one.
- */
-int newgap(int gap);
 
 /*
  * Sorts an array with "nmemb" elements of size "size" using the comb sort algorithm.
