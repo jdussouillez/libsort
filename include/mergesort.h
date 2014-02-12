@@ -6,7 +6,7 @@ extern "C" {
 #endif
 
 /*
- * Sorts an array with "nmemb" elements of size "size" using the merge bubble sort algorithm.
+ * Sorts an array with "nmemb" elements of size "size" using the merge sort algorithm.
  * The "base" argument points to the start of the array.
  * The contents of the array are sorted in ascending order according to a comparison function pointed to
  * by "compare" which is called with two arguments that point to the objets being compared.
