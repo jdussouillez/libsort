@@ -8,7 +8,7 @@
 /*
  * Sort (merge) a part of the array
  */
-void merge(void* base, void* helper, int left, int mid, int right, size_t size, int(*compare)(const void*, const void*)) {
+static void merge(void* base, void* helper, int left, int mid, int right, size_t size, int(*compare)(const void*, const void*)) {
   int i, j, k;
   // Copy the array
   for (i = left; i <= right; i++) {
@@ -40,7 +40,7 @@ void merge(void* base, void* helper, int left, int mid, int right, size_t size, 
 /*
  * Sort the left and right side of the array, then combine them both (recursive)
  */
-void mergesort_rec(void* base, void* helper, int left, int right, size_t size, int(*compare)(const void*, const void*)) {
+static void mergesort_rec(void* base, void* helper, int left, int right, size_t size, int(*compare)(const void*, const void*)) {
   int mid;
   if (right > left) {
     mid = (right + left) / 2;
