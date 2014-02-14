@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -g -W -O3
+CFLAGS = -g -Wall -O3
 LIB = -I../include -L../bin -lsort
 SRC = $(wildcard *.c)
 EXEC = $(SRC:.c=) # Remove the extension ".c"
@@ -13,7 +13,7 @@ build:
 		make -C ../; \
 	fi;
 	@$(foreach f, $(EXEC), \
-		echo "Compiling $f"; \
+		echo "Compiling $f.c"; \
 		$(CC) $(CFLAGS) $(f).c -o $(f) $(LIB); \
 	)
 
