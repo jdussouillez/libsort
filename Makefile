@@ -11,7 +11,7 @@ LIBFLAGS = -cruvs
 SRC=$(wildcard $(SRCDIR)/*.c)
 OBJ=$(SRC:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 TESTFILE=$(TESTDIR)/sort_test
-TARGETS = lib test samples
+TARGETS = lib buildsamples test
 
 all: $(TARGETS)
 
@@ -35,20 +35,21 @@ test: build-tests
 	@echo "Running $(TESTFILE)"
 	@$(TESTFILE)
 
-samples:
-	make -C $(EXDIR)
+buildsamples:
+	@echo "Building samples"
+	@make -C $(EXDIR)
 
 clean: clean_tmp
-	rm -rf $(OBJDIR)
-	make clean -C $(EXDIR)
+	@rm -vrf $(OBJDIR)
+	@make clean -C $(EXDIR)
 
 clean_tests:
-	rm -f $(TESTFILE)
+	@rm -vf $(TESTFILE)
 
 clean_tmp:
-	rm -f *~ $(SRCDIR)/*~ $(INCDIR)/*~ $(TESTDIR)/*~
-	make clean_tmp -C $(EXDIR)
+	@rm -vf *~ $(SRCDIR)/*~ $(INCDIR)/*~ $(TESTDIR)/*~
+	@make clean_tmp -C $(EXDIR)
 
 distclean mrproper veryclean: clean clean_tests
-	rm -rf $(BINDIR)
-	make distclean -C $(EXDIR)
+	@rm -vrf $(BINDIR)
+	@make distclean -C $(EXDIR)

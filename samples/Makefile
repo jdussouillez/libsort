@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -g -Wall -O3
+CFLAGS = -g -W -O3
 LIB = -I../include -L../bin -lsort
 SRC = $(wildcard *.c)
 EXEC = $(SRC:.c=) # Remove the extension ".c"
@@ -18,9 +18,11 @@ build:
 	)
 
 clean: clean_tmp
-	@echo "clean"
+	@$(foreach f, $(EXEC), \
+		rm -vf $f; \
+	)
 
 clean_tmp:
-	rm -f *~
+	@rm -vf *~
 
 distclean mrproper veryclean: clean
