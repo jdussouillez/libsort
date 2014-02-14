@@ -9,8 +9,8 @@ all: $(TARGETS)
 
 build:
 	@if [ ! -e ../bin/libsort.a ]; then \
-		echo "You have to build the lib first (make -C ../)"; \
-		exit 2; \
+		echo "libsort.a not detected. Compiling libsort.a"; \
+		make -C ../; \
 	fi;
 	@$(foreach f, $(EXEC), \
 		echo "Compiling $f"; \
