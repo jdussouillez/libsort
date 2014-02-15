@@ -21,8 +21,20 @@ make distclean
 How to use
 ----------
 
-// TODO
-// ref qsort, functions prototypes
+The functions provided by the lib have the same prototypes (based on the qsort() function from stdlib.h) : 
+
+``` C
+void name_of_algorithm(void* base, size_t nmemb, size_t size, int(*compare)(const void*, const void*));
+// void bubblesort(void* base, size_t nmemb, size_t size, int(*compare)(const void*, const void*));
+// void combsort(void* base, size_t nmemb, size_t size, int(*compare)(const void*, const void*));
+// ...
+```
+- The "base" argument points to the start of the array.
+- The "nmemb" argument is the number of elemenst of the array.
+- The "size" argument is the size of the elements of the array.
+- The "compare" argment points to a function used to compare 2 elements of the array.
+
+See the qort(3) manpage for more information.
 
 Sorting algorithms
 ------------------
